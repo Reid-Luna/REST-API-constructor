@@ -4,7 +4,7 @@
 
 ## to install the constructor use :
 ```
-npm install --save REST-API-constructor
+npm install --save rest-api-constructor
 ```
 
 ## example usage :
