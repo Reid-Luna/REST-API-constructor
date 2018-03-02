@@ -13,12 +13,15 @@ const db = mongoose.connect('mongodb://localhost:27017/test-one')
 
 let runPort
 
+let modelName
+
 
 class API {
 
 	constructor(model, oldschema, port) {
 
 		runPort = port
+		modelName = model
 
 		app.get(`/${model}`, (req, res) => {
 			this[model+'get'](res)
@@ -110,7 +113,7 @@ app.listen(runPort, (err) => {
 	if (err){
 		console.err
 	} else {
-		console.log(`${model} API running on port ${port}`)
+		console.log(`${modelName} API running on port ${runPort}`)
 	}
 })
 
