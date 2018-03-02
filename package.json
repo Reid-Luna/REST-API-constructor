@@ -1,5 +1,5 @@
 {
-  "name": "REST-API-constructor",
+  "name": "rest-api-constructor",
   "version": "1.0.0",
   "description": "a helpful constructor for REST APIs",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Reid-Luna/REST-API-constructor.git"
+    "url": "git+https://github.com/Reid-Luna/rest-api-constructor.git"
   },
   "author": "Reid Luna <reidluna@icloud.com> (https://github.com/Reid-Luna)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Reid-Luna/REST-API-constructor/issues"
+    "url": "https://github.com/Reid-Luna/rest-api-constructor/issues"
   },
-  "homepage": "https://github.com/Reid-Luna/REST-API-constructor#readme",
+  "homepage": "https://github.com/Reid-Luna/rest-api-constructor#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
