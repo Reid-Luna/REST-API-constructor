@@ -11,10 +11,14 @@ app.use(bodyParser.json())
 const mongoose = require('mongoose')
 const db = mongoose.connect('mongodb://localhost:27017/test-one')
 
+let runPort
+
 
 class API {
 
 	constructor(model, oldschema, port) {
+
+		runPort = port
 
 		app.get(`/${model}`, (req, res) => {
 			this[model+'get'](res)
@@ -102,7 +106,7 @@ class API {
 	}
 }
 
-app.listen(port, (err) => {
+app.listen(runPort, (err) => {
 	if (err){
 		console.err
 	} else {
