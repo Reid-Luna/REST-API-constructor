@@ -37,4 +37,4 @@ let schema = {
 ### this will run the api on the port specified
 
 ## db:
-### you must have a mongodb running on port 27017. you will then put the name of the db after the port
+### you must have MongoDB running on port 27017. you will then put the name of the db you wish to use.
