@@ -9,19 +9,19 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
 const mongoose = require('mongoose')
-const db = mongoose.connect('mongodb://localhost:27017/test-one')
 
-let runPort
+let portlist = []
 
 let modelName
 
 
 class API {
 
-	constructor(model, oldschema, port) {
+	constructor(model, oldschema, port, dbName) {
 
-		runPort = port
 		modelName = model
+
+		const db = mongoose.connect(`mongodb://localhost:27017/${dbName}`)
 
 		app.get(`/${model}`, (req, res) => {
 			this[model+'get'](res)
@@ -106,15 +106,21 @@ class API {
 			})
 		}
 
+		if (portlist.indexOf(port) <= -1){
+			app.listen(port, (err) => {
+				if (err){
+					console.err
+				} else {
+					console.log(`${model} API running on port ${port}`)
+				}
+			})
+
+			portlist.push(port)
+		} else {
+			console.log(`${model} API running on port ${port}`)
+		}
+
 	}
 }
-
-app.listen(runPort, (err) => {
-	if (err){
-		console.err
-	} else {
-		console.log(`${modelName} API running on port ${runPort}`)
-	}
-})
 
 module.exports = API

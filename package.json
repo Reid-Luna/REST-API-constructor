@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": ["rest", "api", "express"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Reid-Luna/rest-api-constructor.git"
