@@ -1,4 +1,4 @@
-# REST-API-constructor
+# REST-API-constructor - DEPRECIATED (this was my first program, and I love it :) so im keeping it up)
 ### a helpful constructor for REST APIs using Express, CORS, body-parser, and Mongoose.
 > I did not create Express, CORS, body-parser, or Mongoose. Full credit to their respective developers.
 
